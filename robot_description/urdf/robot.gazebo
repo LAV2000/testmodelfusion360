@@ -94,7 +94,7 @@
   
   
  <!-- hokuyo -->
- <gazebo reference="lidar_1">
+ <gazebo reference="azimuth_v1_1">
     <sensor type="ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
@@ -125,7 +125,7 @@
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
         <topicName>/laser/scan</topicName>
-        <frameName>lidar_1</frameName>
+        <frameName>azimuth_v1_1</frameName>
       </plugin>
     </sensor>
   </gazebo>
