@@ -1,0 +1,39 @@
+robot_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  rl_steer_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rl_steer_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rl_wheel_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rl_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rr_steer_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rr_steer_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rr_wheel_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rr_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  fl_steer_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fl_steer_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  fl_wheel_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fl_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  fr_steer_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fr_steer_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  fr_wheel_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: fr_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}

@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find robot_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="robot" args="rl_steer_joint_position_controller rl_wheel_joint_position_controller rr_steer_joint_position_controller rr_wheel_joint_position_controller fl_steer_joint_position_controller fl_wheel_joint_position_controller fr_steer_joint_position_controller fr_wheel_joint_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/robot/joint_states"/>
+</node>
+
+</launch>
